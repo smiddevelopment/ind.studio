@@ -3,6 +3,7 @@ import { PropsWithChildren } from 'react';
 
 import { SuisseIntl } from '@/shared/fonts';
 import { Locale } from '@/shared/i18n';
+import { cn } from '@/shared/libs';
 import { BasePageProps } from '@/shared/types';
 
 import './globals.css';
@@ -22,7 +23,7 @@ export default function RootLayout({
 }: BasePageProps & PropsWithChildren) {
   return (
     <html lang={lang}>
-      <body className={SuisseIntl.className}>{children}</body>
+      <body className={cn(SuisseIntl.className, 'min-h-screen')}>{children}</body>
     </html>
   );
 }

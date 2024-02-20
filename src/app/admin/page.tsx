@@ -1,3 +1,3 @@
 export default function AdminPage() {
-  return <div>admin page</div>;
+  return <main className="flex flex-col items-center justify-between p-24">Admin page</main>;
 }
