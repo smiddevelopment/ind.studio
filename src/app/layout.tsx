@@ -6,6 +6,7 @@ import { Locale } from '@/shared/i18n';
 import { cn } from '@/shared/libs';
 import { BasePageProps } from '@/shared/types';
 
+import { Header } from './_components/header';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -23,7 +24,10 @@ export default function RootLayout({
 }: BasePageProps & PropsWithChildren) {
   return (
     <html lang={lang}>
-      <body className={cn(SuisseIntl.className, 'min-h-screen')}>{children}</body>
+      <body className={cn(SuisseIntl.className, 'min-h-screen')}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

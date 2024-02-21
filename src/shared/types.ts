@@ -5,3 +5,7 @@ export interface BasePageProps {
     lang: Locale;
   };
 }
+
+export interface ClassNameProp {
+  className?: string;
+}
