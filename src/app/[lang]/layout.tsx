@@ -2,12 +2,13 @@ import type { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
 
 import { SuisseIntl } from '@/shared/fonts';
-import { Locale } from '@/shared/i18n';
+import { DEFAULT_LOCALE, Locale } from '@/shared/i18n';
 import { cn } from '@/shared/libs';
 import { BasePageProps } from '@/shared/types';
 
+import '../globals.css';
+
 import { Header } from './_components/header';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,12 +21,12 @@ export async function generateStaticParams() {
 
 export default function RootLayout({
   children,
-  params: { lang },
+  params: { lang = DEFAULT_LOCALE },
 }: BasePageProps & PropsWithChildren) {
   return (
     <html lang={lang}>
       <body className={cn(SuisseIntl.className, 'min-h-screen')}>
-        <Header />
+        <Header lang={lang} />
         {children}
       </body>
     </html>

@@ -1,3 +1,9 @@
 {
-  "title_hello": "Начните с редактирования"
+  "locale_ru": "Rus",
+  "locale_en": "Eng",
+  "title_projects": "Проекты",
+  "title_studio": "Студия",
+  "title_team": "Команда",
+  "title_job": "Вакансии",
+  "title_talks": "IND Talks"
 }
