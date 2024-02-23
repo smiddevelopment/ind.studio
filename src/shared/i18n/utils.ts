@@ -15,5 +15,9 @@ export function createHrefWithLocale(href: string, locale: Locale) {
 
   if (locale === DEFAULT_LOCALE) return href;
 
+  if (href === '/') {
+    return `/${locale}`;
+  }
+
   return `/${locale}${href}`;
 }

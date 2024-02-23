@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 html {
+    @apply text-gray-1 font-medium;
+    
     font-size: calc(100vw / 1600);
 }
 
@@ -35,9 +37,7 @@ html {
 }
 
 .filling-up-text--hover:hover {
-    background-position: -1000px 0;
-    background-size: 2000px 2000px;
-    transition: background-position 0ms linear, background-size 2.5s cubic-bezier(0.2, 0, 0.2, 1), padding 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+    @apply filling-up-text--active;
 }
 
 .filling-up-text--active {

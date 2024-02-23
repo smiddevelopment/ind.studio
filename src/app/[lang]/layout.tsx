@@ -8,7 +8,7 @@ import { BasePageProps } from '@/shared/types';
 
 import '../globals.css';
 
-import { Header } from './_components/header';
+import { CONTENT_GAP_TOP, Header } from './_components/header';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang={lang}>
       <body className={cn(SuisseIntl.className, 'min-h-screen')}>
         <Header lang={lang} />
-        {children}
+        <div className={CONTENT_GAP_TOP}>{children}</div>
       </body>
     </html>
   );

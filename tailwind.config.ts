@@ -13,9 +13,10 @@ const config: Config = {
       background: '#fff',
       'gray-1': '#4f4f4f',
       'gray-2': '#4f4f4f70',
+      'gray-3': '#4f4f4f1f',
     },
     screens: {
-      pc: '991px',
+      desktop: '991px',
     },
   },
   plugins: [],

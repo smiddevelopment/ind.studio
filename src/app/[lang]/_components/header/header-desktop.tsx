@@ -2,7 +2,6 @@ import 'server-only';
 
 import { LOCALES } from '@/shared/i18n';
 import { getDictionary } from '@/shared/i18n/dictionary';
-import { createHrefWithLocale } from '@/shared/i18n/utils';
 import { cn } from '@/shared/libs';
 import { ClassNameProp, LangProp } from '@/shared/types';
 
@@ -26,28 +25,33 @@ function renderLinks(links: Link[]) {
   );
 }
 
-export const PCHeader = async ({ className, lang }: ClassNameProp & LangProp) => {
+interface DesktopHeaderProps extends ClassNameProp, LangProp {
+  links: Array<{ title: string; href: string }>;
+  headerHeightClass: string;
+}
+
+export const DesktopHeader = async ({
+  className,
+  headerHeightClass,
+  lang,
+  links,
+}: DesktopHeaderProps) => {
   const dictionary = await getDictionary(lang);
 
-  const { leftLinks, rightLinks } = {
-    leftLinks: [{ href: createHrefWithLocale('/', lang), title: dictionary['title_projects'] }],
-    rightLinks: [
-      { href: createHrefWithLocale('/studio', lang), title: dictionary['title_studio'] },
-      { href: createHrefWithLocale('/team', lang), title: dictionary['title_team'] },
-      { href: createHrefWithLocale('/job', lang), title: dictionary['title_job'] },
-      { href: createHrefWithLocale('/talks', lang), title: dictionary['title_talks'] },
-    ],
-  };
+  const leftLinks = [links[0]];
+  const rightLinks = links.slice(1);
 
   return (
     <nav
       className={cn(
         className,
-        'p-[12rem] text-[14rem] h-[40rem] flex items-center justify-between leading-[16rem]',
+        headerHeightClass,
+        'p-[12rem] flex items-center justify-between bg-background',
       )}>
       <div className="flex items-center">{renderLinks(leftLinks)}</div>
       <div className="flex-1"></div>
       <div className="flex items-center">{renderLinks(rightLinks)}</div>
+
       <LocaleSwitch
         className="ml-[50rem]"
         locales={LOCALES.map(locale => ({

@@ -1,5 +1,11 @@
 
 Header
 
-[ ] - make pc-header adaptive
+[ ] - make header adaptive
 [ ] - add cookies alert
+
+
+Other
+
+[ ] - check scroll styles
+[ ] - set custom cursor

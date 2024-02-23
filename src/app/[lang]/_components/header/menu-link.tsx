@@ -18,7 +18,6 @@ export function MenuLink({ children, href, className }: MenuLinkProps) {
     <Link
       href={href}
       className={cn(
-        'text-[14rem] font-medium ',
         className,
         href === pathname ? 'filling-up-text--active' : 'filling-up-text--hover',
       )}>

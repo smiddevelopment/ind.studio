@@ -28,7 +28,7 @@ export function LocaleSwitch({ className, locales }: LocaleSwitchProps) {
   );
 
   return (
-    <div className={cn(className, 'flex items-center ml-[50rem]')}>
+    <div className={cn(className, 'flex items-center')}>
       {locales.map(({ title, locale }, index) => {
         return (
           <Fragment key={locale}>
