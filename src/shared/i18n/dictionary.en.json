@@ -1,3 +1,9 @@
 {
-  "title_hello": "Get started by editing"
+  "locale_ru": "Rus",
+  "locale_en": "Eng",
+  "title_projects": "Projects",
+  "title_studio": "Studio",
+  "title_team": "Team",
+  "title_job": "Job",
+  "title_talks": "IND Talks"
 }

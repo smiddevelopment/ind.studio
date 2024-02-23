@@ -11,6 +11,12 @@ const config: Config = {
       black: '#000',
       white: '#fff',
       background: '#fff',
+      'gray-1': '#4f4f4f',
+      'gray-2': '#4f4f4f70',
+      'gray-3': '#4f4f4f1f',
+    },
+    screens: {
+      desktop: '991px',
     },
   },
   plugins: [],

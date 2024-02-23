@@ -2,3 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply text-gray-1 font-medium;
+    
+    font-size: calc(100vw / 1600);
+}
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size: calc(100vw / 668);
+    }
+}
+
+.filling-up-text--hover {
+    @apply filling-up-text--active;
+    
+    background-position: 1000px 0;
+    background-size: 1000px 1000px;
+    transition: background-position 2500ms cubic-bezier(0.2, 0, 0.2, 1), background-size 1500ms cubic-bezier(0.2, 0, 0.2, 1), opacity 500ms cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.filling-up-text--hover:hover {
+    @apply filling-up-text--active;
+}
+
+.filling-up-text--active {
+    @apply text-gray-1 bg-gray-2;
+    
+    background-attachment: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    color: #4f4f4f;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #000 36%, #b2b2b200 66%);
+    background-image: url(https://uploads-ssl.webflow.com/6414709af6ed6baff5a5c823/64ef306641170da059b3e544_64355954df2a4f466f4e08ed_pixel.svg);
+    -webkit-background-clip: #4f4f4f44;
+    background-clip: text;
+    position: relative;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: -1000px 0;
+    background-size: 2000px 2000px;
+    transition: background-position 0ms linear, background-size 2.5s cubic-bezier(0.2, 0, 0.2, 1), padding 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+}

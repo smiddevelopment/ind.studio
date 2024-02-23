@@ -1,0 +1,11 @@
+
+Header
+
+[ ] - make header adaptive
+[ ] - add cookies alert
+
+
+Other
+
+[ ] - check scroll styles
+[ ] - set custom cursor
